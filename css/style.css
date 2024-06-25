@@ -508,7 +508,7 @@ body {
   -webkit-hyphens: manual;
 }
 .content a {
-  color: #cc2a41;
+  color: #000;
   text-decoration: none;
   background-image: linear-gradient(transparent, transparent 10px, #22272a 10px, #22272a);
   background-position: bottom;
