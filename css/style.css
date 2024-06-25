@@ -335,14 +335,14 @@ body .h2 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: rgba(86,124,119,0.8);
+  color: #000;
   text-transform: none;
   letter-spacing: normal;
   font-weight: bold;
   font-size: 1rem;
 }
 body h3 {
-  color: rgba(86,124,119,0.8);
+  color: #000;
   text-decoration: underline;
   font-weight: bold;
   font-size: 0.9rem;
@@ -426,7 +426,7 @@ body table {
 body th {
   padding: 8px;
   border-bottom: 1px dashed #666;
-  color: rgba(86,124,119,0.8);
+  color: #000;
   font-weight: bold;
   font-size: 13px;
 }
@@ -478,7 +478,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  background-color: #fafafa;
+  background-color: #fff;
   color: #22272a;
   font-weight: 400;
   font-size: 14px;
@@ -508,20 +508,21 @@ body {
   -webkit-hyphens: manual;
 }
 .content a {
-  color: #22272a;
+  color: #000;
   text-decoration: none;
   background-image: linear-gradient(transparent, transparent 10px, #22272a 10px, #22272a);
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
 }
-.content a #不知道为什么改这里超链接下面的下划线就消失了，5px→10px,
 .content a:hover {
-  background-image: linear-gradient(transparent, transparent 4px, rgba(86,124,119,0.4) 4px, rgba(86,124,119,0.4));
+  background-image: linear-gradient(transparent, transparent 4px, #22272a 4px, rgba(86,124,119,0.4));
 }
 .content a.icon {
   background: none;
+  color: inherit;
 }
+.content a.icon #保证图标不变色,
 .content a.icon:hover {
   color: rgba(86,124,119,0.4);
 }
@@ -543,7 +544,7 @@ body {
 .content h4 a:hover,
 .content h5 a:hover,
 .content h6 a:hover {
-  background-image: linear-gradient(transparent, transparent 6px, rgba(86,124,119,0.4) 6px, rgba(86,124,119,0.4));
+  background-image: linear-gradient(transparent, transparent 10px, rgba(86,124,119,0.4) 10px, rgba(86,124,119,0.4));
   background-position: bottom;
   background-size: 100% 6px;
   background-repeat: repeat-x;
@@ -1345,7 +1346,7 @@ article .content .caption {
   background-image: none;
 }
 .pagination a:hover:not(.active) {
-  color: rgba(86,124,119,0.8);
+  color: #000;
 }
 .search-input {
   padding: 4px 7px;
