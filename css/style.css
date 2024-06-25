@@ -335,14 +335,14 @@ body .h2 {
   display: block;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: #000;
+  color: #008000;
   text-transform: none;
   letter-spacing: normal;
   font-weight: bold;
   font-size: 1rem;
 }
 body h3 {
-  color: #000;
+  color: #008000;
   text-decoration: underline;
   font-weight: bold;
   font-size: 0.9rem;
@@ -426,7 +426,7 @@ body table {
 body th {
   padding: 8px;
   border-bottom: 1px dashed #666;
-  color: #000;
+  color: #008000;
   font-weight: bold;
   font-size: 13px;
 }
@@ -508,7 +508,7 @@ body {
   -webkit-hyphens: manual;
 }
 .content a {
-  color: #000;
+  color: #cc2a41;
   text-decoration: none;
   background-image: linear-gradient(transparent, transparent 10px, #22272a 10px, #22272a);
   background-position: bottom;
@@ -1346,7 +1346,7 @@ article .content .caption {
   background-image: none;
 }
 .pagination a:hover:not(.active) {
-  color: #000;
+  color: #008000;
 }
 .search-input {
   padding: 4px 7px;
