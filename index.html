@@ -61,6 +61,14 @@
 		</script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 	
+  <script>      //这段 新标签页打开pdf
+    document.addEventListener("DOMContentLoaded", function() {
+      var links = document.querySelectorAll('a[href$=".pdf"]');
+      links.forEach(function(link) {
+        link.setAttribute('target', '_blank');
+      });
+    });
+  </script>    //
 <meta name="generator" content="Hexo 7.2.0"><style>mjx-container[jax="SVG"] {
   direction: ltr;
 }
@@ -210,7 +218,7 @@ mjx-container[display="true"] + br {
 
         
         <section id="about" class="p-note">
-  <p>Hi, I’m Bo Zhao, a prospective Ph.D student at <a target="_blank" rel="noopener" href="https://www.westlake.edu.cn/">Westlake University</a>. I
+  <p>Hi, I’m Bo Zhao, a prospective Ph.D student at <a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.westlake.edu.cn/">Westlake University</a>. I
     recieved my bachelor's degree from the College of Physics and Electronic Engineering, <a
       target="_blank" rel="noopener" href="https://www.sxu.edu.cn/">Shanxi University</a> in 2023. My research interests include topological physics
     and quantum optomechanics. </p>
@@ -225,7 +233,7 @@ mjx-container[display="true"] + br {
           
             
             
-              <a class="icon u-url" target="_blank" rel="noopener me" href="https://github.com/zhaobo-physics" aria-label="github" title="github">
+              <a class="icon u-url" target="_blank" rel="noopener me external nofollow noreferrer" href="https://github.com/zhaobo-physics" aria-label="github" title="github">
                 <i class="fa-brands fa-github"></i><!--
           ---></a><!--
         ---><!--
@@ -234,7 +242,7 @@ mjx-container[display="true"] + br {
           
             
             
-              <a class="icon u-url" target="_blank" rel="noopener me" href="https://scholar.google.com/citations?user=3K976LIAAAAJ&hl=en" aria-label="google-scholar" title="google-scholar">
+              <a class="icon u-url" target="_blank" rel="noopener me external nofollow noreferrer" href="https://scholar.google.com/citations?user=3K976LIAAAAJ&hl=en" aria-label="google-scholar" title="google-scholar">
                 <i class="fa-brands fa-google-scholar"></i><!--
           ---></a><!--
         ---><!--
@@ -243,7 +251,7 @@ mjx-container[display="true"] + br {
           
             
             
-              <a class="icon u-url" target="_blank" rel="noopener me" href="https://orcid.org/0009-0000-6129-2156" aria-label="orcid" title="orcid">
+              <a class="icon u-url" target="_blank" rel="noopener me external nofollow noreferrer" href="https://orcid.org/0009-0000-6129-2156" aria-label="orcid" title="orcid">
                 <i class="fa-brands fa-orcid"></i><!--
           ---></a><!--
         ---><!--
@@ -252,7 +260,7 @@ mjx-container[display="true"] + br {
           
             
             
-              <a class="icon u-url" target="_blank" rel="noopener me" href="https://www.researchgate.net/profile/Bo-Zhao-126" aria-label="researchgate" title="researchgate">
+              <a class="icon u-url" target="_blank" rel="noopener me external nofollow noreferrer" href="https://www.researchgate.net/profile/Bo-Zhao-126" aria-label="researchgate" title="researchgate">
                 <i class="fa-brands fa-researchgate"></i><!--
           ---></a><!--
         ---><!--
@@ -373,9 +381,6 @@ mjx-container[display="true"] + br {
     </nav>
   </div>
 </footer>
-
-
-
 
     </div>
     <!-- styles -->

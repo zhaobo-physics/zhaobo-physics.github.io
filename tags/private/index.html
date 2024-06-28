@@ -61,6 +61,14 @@
 		</script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 	
+  <script>      //这段 新标签页打开pdf
+    document.addEventListener("DOMContentLoaded", function() {
+      var links = document.querySelectorAll('a[href$=".pdf"]');
+      links.forEach(function(link) {
+        link.setAttribute('target', '_blank');
+      });
+    });
+  </script>    //
 <meta name="generator" content="Hexo 7.2.0"></head>
 
 <body class="max-width mx-auto px3 ltr">
@@ -108,6 +116,30 @@
       
       
         <li class="post-year"><h2>2024</h2></li>
+      
+      <li class="post-item">
+        
+    <div class="meta">
+      
+        
+          <time datetime="2024-06-28T12:50:55.000Z" class="dt-published" itemprop="datePublished">2024-06-28</time>
+        
+      
+    </div>
+
+
+        <span>
+    
+        <a class="" href="/2024/06/28/%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93%EF%BC%882024-06-22-2024-06-28%EF%BC%89/">一周总结（2024/06/22-2024/06/28）</a>
+    
+
+
+</span>
+      </li>
+    
+      
+      
+      
       
       <li class="post-item">
         
@@ -172,9 +204,6 @@
     </nav>
   </div>
 </footer>
-
-
-
 
     </div>
     <!-- styles -->
