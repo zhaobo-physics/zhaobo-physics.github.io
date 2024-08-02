@@ -6,15 +6,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta property="og:type" content="article">
+    <meta name="description" content="今天只放图，后面会补上绘制思路、代码以及如何写出Hamiltonian等，以及相关物理（还没看）。 六角蜂窝晶格 FIG.1: 色散关系，晶格规范(a)，原子规范(b)。Berry曲率，晶格规范(c)，原子规范(d)。   FIG.2: 能带结构，Loop以及Winding Number。  Haldane Model FIG.3: 色散关系及贝利曲率（对应陈数1，-1）。   FIG.4: 能带">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Haldane Model笔记">
 <meta property="og:url" content="http://example.com/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Bo Zhao">
+<meta property="og:description" content="今天只放图，后面会补上绘制思路、代码以及如何写出Hamiltonian等，以及相关物理（还没看）。 六角蜂窝晶格 FIG.1: 色散关系，晶格规范(a)，原子规范(b)。Berry曲率，晶格规范(c)，原子规范(d)。   FIG.2: 能带结构，Loop以及Winding Number。  Haldane Model FIG.3: 色散关系及贝利曲率（对应陈数1，-1）。   FIG.4: 能带">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_a.png">
+<meta property="og:image" content="http://example.com/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_b.png">
+<meta property="og:image" content="http://example.com/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_c.png">
+<meta property="og:image" content="http://example.com/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_d.png">
+<meta property="og:image" content="http://example.com/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_e.png">
 <meta property="article:published_time" content="2024-08-02T13:51:11.000Z">
-<meta property="article:modified_time" content="2024-08-02T13:51:11.014Z">
+<meta property="article:modified_time" content="2024-08-02T15:57:11.423Z">
 <meta property="article:author" content="Bo Zhao">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_a.png">
     
     
       
@@ -98,7 +106,7 @@
       <ul>
         
         
-        <li><a class="icon" aria-label="Next post" href="/2024/08/02/%E4%B8%80%E5%91%A8%E6%80%BB%E7%BB%93%EF%BC%882024-07-20-2024-07-26%EF%BC%89/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Next post" href="/2024/08/02/%E4%B8%A4%E5%91%A8%E6%80%BB%E7%BB%93%EF%BC%882024-07-20-2024-08-02%EF%BC%89/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -126,6 +134,10 @@
 
     </div>
     
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E8%A7%92%E8%9C%82%E7%AA%9D%E6%99%B6%E6%A0%BC"><span class="toc-number">1.</span> <span class="toc-text">六角蜂窝晶格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Haldane-Model"><span class="toc-number">2.</span> <span class="toc-text">Haldane Model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E6%89%8B%E6%80%A7%E8%BE%B9%E7%95%8C%E6%80%81"><span class="toc-number">3.</span> <span class="toc-text">反手性边界态</span></a></li></ol>
+      </div>
     
   </span>
 </div>
@@ -164,7 +176,21 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    
+    <p>今天只放图，后面会补上绘制思路、代码以及如何写出Hamiltonian等，以及相关物理（还没看）。</p>
+<h1 id="六角蜂窝晶格"><a href="#六角蜂窝晶格" class="headerlink" title="六角蜂窝晶格"></a>六角蜂窝晶格</h1><p><img src="/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_a.png" alt="图片"></p>
+<p style="text-align: center;"><em>FIG.1: 色散关系，晶格规范(a)，原子规范(b)。Berry曲率，晶格规范(c)，原子规范(d)。</em></p>
+
+<p><img src="/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_b.png" alt="图片"></p>
+<p style="text-align: center;"><em>FIG.2: 能带结构，Loop以及Winding Number。</em></p>
+
+<h1 id="Haldane-Model"><a href="#Haldane-Model" class="headerlink" title="Haldane Model"></a>Haldane Model</h1><p><img src="/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_c.png" alt="图片"></p>
+<p style="text-align: center;"><em>FIG.3: 色散关系及贝利曲率（对应陈数1，-1）。</em></p>
+
+<p><img src="/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_d.png" alt="图片"></p>
+<p style="text-align: center;"><em>FIG.4: 能带结构。</em></p>
+
+<h1 id="反手性边界态"><a href="#反手性边界态" class="headerlink" title="反手性边界态"></a>反手性边界态</h1><p><img src="/2024/08/02/Haldane-Model%E7%AC%94%E8%AE%B0/2024_08_02_e.png" alt="图片"></p>
+<p style="text-align: center;"><em>FIG.5: 色散关系及能带结构。</em></p>
   </div>
 </article>
 
@@ -189,6 +215,10 @@
 
     
     
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E8%A7%92%E8%9C%82%E7%AA%9D%E6%99%B6%E6%A0%BC"><span class="toc-number">1.</span> <span class="toc-text">六角蜂窝晶格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Haldane-Model"><span class="toc-number">2.</span> <span class="toc-text">Haldane Model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E6%89%8B%E6%80%A7%E8%BE%B9%E7%95%8C%E6%80%81"><span class="toc-number">3.</span> <span class="toc-text">反手性边界态</span></a></li></ol>
+      </div>
+    
 
     <div id="share-footer" style="display: none">
       <ul>
@@ -209,6 +239,8 @@
 
     <div id="actions-footer">
         <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
         
         <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
         <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
